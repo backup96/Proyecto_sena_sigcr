@@ -1,0 +1,122 @@
+.vista-propietario {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #a5a3a3;
+  padding: 10px;
+  border-bottom: 1px solid #000000;
+}
+
+.logo img {
+  height: 80px;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-right button,
+.navbar-right a {
+  margin-left: 10px;
+  background-color: #c0bebe;
+  color: #000000;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.main-content {
+  display: flex;
+  flex: 1;
+}
+
+.side-nav {
+  background-color: #a5a3a3;
+  width: 150px;
+  padding-top: 20px;
+}
+
+.lista-vistas {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.vista {
+  background-color: #c0bebe;
+  color: #000000;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.vista a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.contenedor {
+  background-color: #e5e5e5;
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.parqueadero-view, .salon-comunal-view {
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* ESTILOS BARRA DE BUSQUEDA VISTA PARQUEADERO */
+.search-bar {
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.table-container {
+  margin-bottom: 20px;
+}
+
+
+/* TAMAÑOS DE TABLA */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+table, th, td {
+  border: 1px solid #000000;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #d48686;
+}
+
+button {
+  background-color: #db7373;
+  color: #000000;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+
+button:hover {
+  background-color: #ce1313ce;
+}
