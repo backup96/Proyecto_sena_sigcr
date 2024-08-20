@@ -11,7 +11,6 @@ library.add(faPenToSquare);
 const TablaVivienda = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const recordsPerPage = 10;
-
   // Datos de ejemplo
   const data = [
     { codigo: "1101", parquedero: "3" },
@@ -32,15 +31,12 @@ const TablaVivienda = () => {
     { codigo: "1106", parquedero: "13" },
     // Agrega más registros si es necesario
   ];
-
   // Cálculo del índice de los registros actuales a mostrar
   const indexOfLastRecord = currentPage * recordsPerPage;
   const indexOfFirstRecord = indexOfLastRecord - recordsPerPage;
   const currentRecords = data.slice(indexOfFirstRecord, indexOfLastRecord);
-
   // Cálculo del total de páginas
   const totalPages = Math.ceil(data.length / recordsPerPage);
-
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
   };

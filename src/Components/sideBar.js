@@ -5,7 +5,6 @@ import TablaPropietarios from "./Componentes_Admin/propietarios";
 
 const SideBar = () => {
     const [currentTable, setCurrentTable] = useState("Viviendas")
-
   return (
     <>
       <div className="d-flex flex-row h-100">
