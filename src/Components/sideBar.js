@@ -1,10 +1,9 @@
 import { Link } from "react-router-dom";
-import TablaVivienda from "./Componentes_Admin/viviendas";
+import Tabla from "./Componentes_Admin/tabla";
 import { useState } from "react";
-import TablaPropietarios from "./Componentes_Admin/propietarios";
 
 const SideBar = () => {
-    const [currentTable, setCurrentTable] = useState("Viviendas")
+    const [currentTable, setCurrentTable] = useState("Apartamentos");
   return (
     <>
       <div className="d-flex flex-row h-100">
@@ -17,9 +16,14 @@ const SideBar = () => {
             <ul className="nav nav-pills flex-column mb-auto">
               <li className="nav-item">
                 <Link
-                  onClick={() => setCurrentTable("Viviendas")}
+                  onClick={() => setCurrentTable("Apartamentos")}
+                  id="myLink"
                   href="#"
-                  className="nav-link active"
+                  className={
+                    currentTable === "Apartamentos"
+                      ? "nav-link active"
+                      : "nav-link text-white"
+                  }
                   aria-current="page"
                 >
                   <svg className="bi me-2" width={16} height={16}>
@@ -32,7 +36,11 @@ const SideBar = () => {
                 <Link
                   onClick={() => setCurrentTable("Propietarios")}
                   href="#"
-                  className="nav-link text-white"
+                  className={
+                    currentTable === "Propietarios"
+                      ? "nav-link active"
+                      : "nav-link text-white"
+                  }
                 >
                   <svg className="bi me-2" width={16} height={16}>
                     <use xlinkHref="#speedometer2" />
@@ -44,7 +52,11 @@ const SideBar = () => {
                 <Link
                   onClick={() => setCurrentTable("Parqueadero")}
                   href="#"
-                  className="nav-link text-white"
+                  className={
+                    currentTable === "Parqueadero"
+                      ? "nav-link active"
+                      : "nav-link text-white"
+                  }
                 >
                   <svg className="bi me-2" width={16} height={16}>
                     <use xlinkHref="#table" />
@@ -56,7 +68,11 @@ const SideBar = () => {
                 <Link
                   onClick={() => setCurrentTable("Invitados")}
                   href="#"
-                  className="nav-link text-white"
+                  className={
+                    currentTable === "Invitados"
+                      ? "nav-link active"
+                      : "nav-link text-white"
+                  }
                 >
                   <svg className="bi me-2" width={16} height={16}>
                     <use xlinkHref="#grid" />
@@ -66,9 +82,13 @@ const SideBar = () => {
               </li>
               <li>
                 <Link
-                  onClick={() => setCurrentTable("Salon Comunal")}
+                  onClick={() => setCurrentTable("SalonComunal")}
                   href="#"
-                  className="nav-link text-white"
+                  className={
+                    currentTable === "Salon Comunal"
+                      ? "nav-link active"
+                      : "nav-link text-white"
+                  }
                 >
                   <svg className="bi me-2" width={16} height={16}>
                     <use xlinkHref="#people-circle" />
@@ -80,7 +100,11 @@ const SideBar = () => {
                 <Link
                   onClick={() => setCurrentTable("Reuniones")}
                   href="#"
-                  className="nav-link text-white"
+                  className={
+                    currentTable === "Reuniones"
+                      ? "nav-link active"
+                      : "nav-link text-white"
+                  }
                 >
                   <svg className="bi me-2" width={16} height={16}>
                     <use xlinkHref="#people-circle" />
@@ -92,7 +116,11 @@ const SideBar = () => {
                 <Link
                   onClick={() => setCurrentTable("Porteros")}
                   href="#"
-                  className="nav-link text-white"
+                  className={
+                    currentTable === "Porteros"
+                      ? "nav-link active"
+                      : "nav-link text-white"
+                  }
                 >
                   <svg className="bi me-2" width={16} height={16}>
                     <use xlinkHref="#people-circle" />
@@ -104,7 +132,11 @@ const SideBar = () => {
                 <Link
                   onClick={() => setCurrentTable("Administradores")}
                   href="#"
-                  className="nav-link text-white"
+                  className={
+                    currentTable === "Administradores"
+                      ? "nav-link active"
+                      : "nav-link text-white"
+                  }
                 >
                   <svg className="bi me-2" width={16} height={16}>
                     <use xlinkHref="#people-circle" />
@@ -116,7 +148,54 @@ const SideBar = () => {
             <hr />
           </div>
         </div>
-        {currentTable === "Viviendas" ? <TablaVivienda /> : <TablaPropietarios/>}
+        <Tabla
+          item={
+            currentTable === "Apartamentos"
+              ? ["Codigo de vivienda", "Numero de parquedadero"]
+              : currentTable === "Propietarios"
+              ? [
+                  "Codigo de vivienda",
+                  "Nombre",
+                  "Teléfono",
+                  "Correo",
+                  "Numero de Documento",
+                  "Meses Atrasados",
+                ]
+              : currentTable === "Parqueadero"
+              ? ["Numero de Espacio", "Tipo de Espacio", "Estado"]
+              : currentTable === "Invitados"
+              ? [
+                  "Nombre",
+                  "Numero de Documento",
+                  "Teléfono",
+                  "Correo",
+                  "Numero de parqueadero",
+                  "Costo",
+                  "Codigo de Vivienda",
+                ]
+              : currentTable === "SalonComunal"
+              ? [
+                  "Numero de Cita",
+                  "Nombre del solicitante",
+                  "Numero de Documento",
+                  "Teléfono",
+                  "Fecha",
+                  "Valor del Alquiler",
+                ]
+              : currentTable === "Reuniones"
+              ? ["Numero de Reunion", "Motivo", "Fecha", "Horario"]
+              : currentTable === "Porteros"
+              ? [
+                  "Nombre",
+                  "Numero de Documento",
+                  "Teléfono",
+                  "Correo",
+                  "Tipo de Turno",
+                ]
+              : ["Nombre", "Numero de Documento", "Teléfono", "Correo"]
+          }
+          apiS={currentTable}
+        />
       </div>
     </>
   );
