@@ -13,6 +13,8 @@ const Tabla = ({ apiS }) => {
   const [currentPageMoto, setcurrentPageMoto] = useState(1);
   const [currentPageCarro, setcurrentPageCarro] = useState(1);
 
+  const meses = ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"]
+
   const recordsPerPage = 12;
 
   const [dataMoto, setdataMoto] = useState([]);
@@ -20,6 +22,7 @@ const Tabla = ({ apiS }) => {
 
   useEffect(() => {
     async function fetchApartamentos() {
+      
       try {
         const responseMoto = await axios.get(`http://localhost:4000/${apiS}?TipoEspacio=Moto`);
         setdataMoto(responseMoto.data);
@@ -62,7 +65,8 @@ const Tabla = ({ apiS }) => {
   return (
     <div className="w-100 h-100">
       <div className="card m-0 h-100">
-        <div className="d-flex flex-row">
+        {apiS === "Parqueadero" ? 
+          <div className="d-flex flex-row">
           <div className="px-3 w-50">
             <form className="d-flex" role="search">
               <input
@@ -114,10 +118,10 @@ const Tabla = ({ apiS }) => {
                       role="status"
                       aria-live="polite"
                     >
-                      Mostrando {indexOfFirstRecord + 1} a{" "}
-                      {indexOfLastRecord > dataMoto.length
+                      Mostrando {indexOfFirstRecordMoto + 1} a{" "}
+                      {indexOfLastRecordMoto > dataMoto.length
                         ? dataMoto.length
-                        : indexOfLastRecord}{" "}
+                        : indexOfLastRecordMoto}{" "}
                       de {dataMoto.length} registros
                     </div>
                   </div>
@@ -129,12 +133,12 @@ const Tabla = ({ apiS }) => {
                       <ul className="pagination">
                         <li
                           className={`paginate_button page-item previous ${
-                            currentPage === 1 ? "disabled" : ""
+                            currentPageMoto === 1 ? "disabled" : ""
                           }`}
                           id="example2_previous"
                         >
                           <Link
-                            onClick={() => handlePageChange(currentPage - 1)}
+                            onClick={() => handlePageChangeMoto(currentPageMoto - 1)}
                             href="#"
                             aria-controls="example2"
                             data-dt-idx="0"
@@ -148,11 +152,11 @@ const Tabla = ({ apiS }) => {
                           <li
                             key={index}
                             className={`paginate_button page-item ${
-                              currentPage === index + 1 ? "active" : ""
+                              currentPageMoto === index + 1 ? "active" : ""
                             }`}
                           >
                             <button
-                              onClick={() => handlePageChange(index + 1)}
+                              onClick={() => handlePageChangeMoto(index + 1)}
                               className="page-link"
                             >
                               {index + 1}
@@ -161,12 +165,12 @@ const Tabla = ({ apiS }) => {
                         ))}
                         <li
                           className={`paginate_button page-item next ${
-                            currentPage === totalPagesMoto ? "disabled" : ""
+                            currentPageMoto === totalPagesMoto ? "disabled" : ""
                           }`}
                           id="example2_next"
                         >
                           <Link
-                            onClick={() => handlePageChange(currentPage + 1)}
+                            onClick={() => handlePageChangeMoto(currentPageMoto + 1)}
                             href="#"
                             aria-controls="example2"
                             data-dt-idx="7"
@@ -234,10 +238,10 @@ const Tabla = ({ apiS }) => {
                       role="status"
                       aria-live="polite"
                     >
-                      Mostrando {indexOfFirstRecord + 1} a{" "}
-                      {indexOfLastRecord > dataCarro.length
+                      Mostrando {indexOfFirstRecordCarro + 1} a{" "}
+                      {indexOfLastRecordCarro > dataCarro.length
                         ? dataCarro.length
-                        : indexOfLastRecord}{" "}
+                        : indexOfLastRecordCarro}{" "}
                       de {dataCarro.length} registros
                     </div>
                   </div>
@@ -249,12 +253,12 @@ const Tabla = ({ apiS }) => {
                       <ul className="pagination">
                         <li
                           className={`paginate_button page-item previous ${
-                            currentPage === 1 ? "disabled" : ""
+                            currentPageCarro === 1 ? "disabled" : ""
                           }`}
                           id="example2_previous"
                         >
                           <Link
-                            onClick={() => handlePageChange(currentPage - 1)}
+                            onClick={() => handlePageChangeCarro(currentPageCarro - 1)}
                             href="#"
                             aria-controls="example2"
                             data-dt-idx="0"
@@ -268,11 +272,11 @@ const Tabla = ({ apiS }) => {
                           <li
                             key={index}
                             className={`paginate_button page-item ${
-                              currentPage === index + 1 ? "active" : ""
+                              currentPageCarro === index + 1 ? "active" : ""
                             }`}
                           >
                             <button
-                              onClick={() => handlePageChange(index + 1)}
+                              onClick={() => handlePageChangeCarro(index + 1)}
                               className="page-link"
                             >
                               {index + 1}
@@ -281,12 +285,12 @@ const Tabla = ({ apiS }) => {
                         ))}
                         <li
                           className={`paginate_button page-item next ${
-                            currentPage === totalPagesCarro ? "disabled" : ""
+                            currentPageCarro === totalPagesCarro ? "disabled" : ""
                           }`}
                           id="example2_next"
                         >
                           <Link
-                            onClick={() => handlePageChange(currentPage + 1)}
+                            onClick={() => handlePageChangeCarro(currentPageCarro + 1)}
                             href="#"
                             aria-controls="example2"
                             data-dt-idx="7"
@@ -303,7 +307,16 @@ const Tabla = ({ apiS }) => {
               </div>
             </div>
           </div>
-        </div>
+          </div> : 
+        apiS === "SalonComunal" ? 
+        meses.map((record, index) => (
+          record == ["Enero", "Marzo", "Mayo","Julio","Agosto","Octubre","Diciembre"] ?
+          <div key={index}>
+            {record}
+          </div> : <div>hola</div>
+        )) :
+        null
+        }
       </div>
     </div>
   );

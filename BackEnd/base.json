@@ -158,7 +158,10 @@
       "Teléfono": 325654785,
       "Correo": "denys@gmail.com",
       "NumeroDocumento": 1548952136,
-      "MesesAtrasados": 2
+      "MesesAtrasados": 2,
+      "EspacioParqueadero": 0,
+      "User": "generic1",
+      "Pass": "passG1"
     },
     {
       "CodigoVivienda": 1102,
@@ -166,7 +169,10 @@
       "Teléfono": 321654987,
       "Correo": "marta.lopez@gmail.com",
       "NumeroDocumento": 1548952137,
-      "MesesAtrasados": 1
+      "MesesAtrasados": 1,
+      "EspacioParqueadero": 0,
+      "User": "generic1",
+      "Pass": "passG1"
     },
     {
       "CodigoVivienda": 1103,
@@ -174,7 +180,10 @@
       "Teléfono": 312789456,
       "Correo": "carlos.perez@hotmail.com",
       "NumeroDocumento": 1548952138,
-      "MesesAtrasados": 0
+      "MesesAtrasados": 0,
+      "EspacioParqueadero": 0,
+      "User": "generic1",
+      "Pass": "passG1"
     },
     {
       "CodigoVivienda": 1104,
@@ -182,7 +191,10 @@
       "Teléfono": 310123456,
       "Correo": "ana.garcia@yahoo.com",
       "NumeroDocumento": 1548952139,
-      "MesesAtrasados": 3
+      "MesesAtrasados": 3,
+      "EspacioParqueadero": 0,
+      "User": "generic1",
+      "Pass": "passG1"
     },
     {
       "CodigoVivienda": 1105,
@@ -190,7 +202,10 @@
       "Teléfono": 320987654,
       "Correo": "luis.martinez@gmail.com",
       "NumeroDocumento": 1548952140,
-      "MesesAtrasados": 1
+      "MesesAtrasados": 1,
+      "EspacioParqueadero": 0,
+      "User": "generic1",
+      "Pass": "passG1"
     },
     {
       "CodigoVivienda": 1106,
@@ -198,7 +213,10 @@
       "Teléfono": 315654321,
       "Correo": "elena.rodriguez@gmail.com",
       "NumeroDocumento": 1548952141,
-      "MesesAtrasados": 0
+      "MesesAtrasados": 0,
+      "EspacioParqueadero": 0,
+      "User": "generic1",
+      "Pass": "passG1"
     },
     {
       "CodigoVivienda": 1107,
@@ -206,7 +224,10 @@
       "Teléfono": 318654987,
       "Correo": "miguel.hernandez@gmail.com",
       "NumeroDocumento": 1548952142,
-      "MesesAtrasados": 4
+      "MesesAtrasados": 4,
+      "EspacioParqueadero": 0,
+      "User": "generic1",
+      "Pass": "passG1"
     },
     {
       "CodigoVivienda": 1108,
@@ -214,7 +235,10 @@
       "Teléfono": 317789456,
       "Correo": "laura.jimenez@hotmail.com",
       "NumeroDocumento": 1548952143,
-      "MesesAtrasados": 2
+      "MesesAtrasados": 2,
+      "EspacioParqueadero": 0,
+      "User": "generic1",
+      "Pass": "passG1"
     },
     {
       "CodigoVivienda": 1109,
@@ -222,7 +246,10 @@
       "Teléfono": 316123789,
       "Correo": "jorge.ramirez@yahoo.com",
       "NumeroDocumento": 1548952144,
-      "MesesAtrasados": 0
+      "MesesAtrasados": 0,
+      "EspacioParqueadero": 0,
+      "User": "generic1",
+      "Pass": "passG1"
     },
     {
       "CodigoVivienda": 1110,
@@ -230,7 +257,10 @@
       "Teléfono": 314654123,
       "Correo": "sara.sanchez@gmail.com",
       "NumeroDocumento": 1548952145,
-      "MesesAtrasados": 1
+      "MesesAtrasados": 1,
+      "EspacioParqueadero": 0,
+      "User": "generic1",
+      "Pass": "passG1"
     },
     {
       "CodigoVivienda": 1111,
@@ -238,7 +268,10 @@
       "Teléfono": 311789654,
       "Correo": "david.moreno@hotmail.com",
       "NumeroDocumento": 1548952146,
-      "MesesAtrasados": 3
+      "MesesAtrasados": 3,
+      "EspacioParqueadero": 0,
+      "User": "generic1",
+      "Pass": "passG1"
     },
     {
       "CodigoVivienda": 1112,
@@ -246,7 +279,10 @@
       "Teléfono": 319123987,
       "Correo": "claudia.rojas@gmail.com",
       "NumeroDocumento": 1548952147,
-      "MesesAtrasados": 0
+      "MesesAtrasados": 0,
+      "EspacioParqueadero": 0,
+      "User": "generic1",
+      "Pass": "passG1"
     },
     {
       "CodigoVivienda": 1113,
@@ -254,7 +290,10 @@
       "Teléfono": 322654321,
       "Correo": "pedro.castillo@gmail.com",
       "NumeroDocumento": 1548952148,
-      "MesesAtrasados": 1
+      "MesesAtrasados": 1,
+      "EspacioParqueadero": 0,
+      "User": "generic1",
+      "Pass": "passG1"
     },
     {
       "CodigoVivienda": 1114,
@@ -262,7 +301,10 @@
       "Teléfono": 326789456,
       "Correo": "sofia.torres@hotmail.com",
       "NumeroDocumento": 1548952149,
-      "MesesAtrasados": 2
+      "MesesAtrasados": 2,
+      "EspacioParqueadero": 0,
+      "User": "generic1",
+      "Pass": "passG1"
     },
     {
       "CodigoVivienda": 1115,
@@ -270,7 +312,10 @@
       "Teléfono": 324123789,
       "Correo": "ricardo.gomez@yahoo.com",
       "NumeroDocumento": 1548952150,
-      "MesesAtrasados": 4
+      "MesesAtrasados": 4,
+      "EspacioParqueadero": 0,
+      "User": "generic1",
+      "Pass": "passG1"
     },
     {
       "CodigoVivienda": 1116,
@@ -278,7 +323,10 @@
       "Teléfono": 329654123,
       "Correo": "patricia.diaz@gmail.com",
       "NumeroDocumento": 1548952151,
-      "MesesAtrasados": 0
+      "MesesAtrasados": 0,
+      "EspacioParqueadero": 0,
+      "User": "generic1",
+      "Pass": "passG1"
     },
     {
       "CodigoVivienda": 1117,
@@ -286,7 +334,10 @@
       "Teléfono": 323789654,
       "Correo": "alejandro.ruiz@hotmail.com",
       "NumeroDocumento": 1548952152,
-      "MesesAtrasados": 3
+      "MesesAtrasados": 3,
+      "EspacioParqueadero": 0,
+      "User": "generic1",
+      "Pass": "passG1"
     },
     {
       "CodigoVivienda": 1118,
@@ -294,7 +345,10 @@
       "Teléfono": 327123987,
       "Correo": "valeria.medina@yahoo.com",
       "NumeroDocumento": 1548952153,
-      "MesesAtrasados": 1
+      "MesesAtrasados": 1,
+      "EspacioParqueadero": 0,
+      "User": "generic1",
+      "Pass": "passG1"
     },
     {
       "CodigoVivienda": 1119,
@@ -302,7 +356,10 @@
       "Teléfono": 330654321,
       "Correo": "enrique.vega@gmail.com",
       "NumeroDocumento": 1548952154,
-      "MesesAtrasados": 2
+      "MesesAtrasados": 2,
+      "EspacioParqueadero": 0,
+      "User": "generic1",
+      "Pass": "passG1"
     },
     {
       "CodigoVivienda": 1120,
@@ -310,7 +367,10 @@
       "Teléfono": 328789456,
       "Correo": "maria.flores@hotmail.com",
       "NumeroDocumento": 1548952155,
-      "MesesAtrasados": 0
+      "MesesAtrasados": 0,
+      "EspacioParqueadero": 0,
+      "User": "generic1",
+      "Pass": "passG1"
     },
     {
       "CodigoVivienda": 1121,
@@ -318,7 +378,10 @@
       "Teléfono": 331123789,
       "Correo": "andres.ortiz@yahoo.com",
       "NumeroDocumento": 1548952156,
-      "MesesAtrasados": 3
+      "MesesAtrasados": 3,
+      "EspacioParqueadero": 0,
+      "User": "generic1",
+      "Pass": "passG1"
     },
     {
       "CodigoVivienda": 1122,
@@ -326,7 +389,10 @@
       "Teléfono": 332654123,
       "Correo": "gabriela.silva@gmail.com",
       "NumeroDocumento": 1548952157,
-      "MesesAtrasados": 1
+      "MesesAtrasados": 1,
+      "EspacioParqueadero": 0,
+      "User": "generic1",
+      "Pass": "passG1"
     },
     {
       "CodigoVivienda": 1123,
@@ -334,7 +400,10 @@
       "Teléfono": 333789654,
       "Correo": "fernando.pena@hotmail.com",
       "NumeroDocumento": 1548952158,
-      "MesesAtrasados": 4
+      "MesesAtrasados": 4,
+      "EspacioParqueadero": 0,
+      "User": "generic1",
+      "Pass": "passG1"
     },
     {
       "CodigoVivienda": 1124,
@@ -342,7 +411,10 @@
       "Teléfono": 334123987,
       "Correo": "isabel.vargas@yahoo.com",
       "NumeroDocumento": 1548952159,
-      "MesesAtrasados": 0
+      "MesesAtrasados": 0,
+      "EspacioParqueadero": 0,
+      "User": "generic1",
+      "Pass": "passG1"
     },
     {
       "CodigoVivienda": 1125,
@@ -350,7 +422,10 @@
       "Teléfono": 335654321,
       "Correo": "tomas.mendoza@gmail.com",
       "NumeroDocumento": 1548952160,
-      "MesesAtrasados": 2
+      "MesesAtrasados": 2,
+      "EspacioParqueadero": 0,
+      "User": "generic1",
+      "Pass": "passG1"
     },
     {
       "CodigoVivienda": 1126,
@@ -358,7 +433,10 @@
       "Teléfono": 336789456,
       "Correo": "lucia.morales@hotmail.com",
       "NumeroDocumento": 1548952161,
-      "MesesAtrasados": 1
+      "MesesAtrasados": 1,
+      "EspacioParqueadero": 0,
+      "User": "generic1",
+      "Pass": "passG1"
     },
     {
       "CodigoVivienda": 1127,
@@ -366,7 +444,10 @@
       "Teléfono": 337123789,
       "Correo": "juan.ramirez@yahoo.com",
       "NumeroDocumento": 1548952162,
-      "MesesAtrasados": 3
+      "MesesAtrasados": 3,
+      "EspacioParqueadero": 0,
+      "User": "generic1",
+      "Pass": "passG1"
     },
     {
       "CodigoVivienda": 1128,
@@ -374,7 +455,10 @@
       "Teléfono": 338654123,
       "Correo": "natalia.castro@gmail.com",
       "NumeroDocumento": 1548952163,
-      "MesesAtrasados": 0
+      "MesesAtrasados": 0,
+      "EspacioParqueadero": 0,
+      "User": "generic1",
+      "Pass": "passG1"
     },
     {
       "CodigoVivienda": 1129,
@@ -382,7 +466,10 @@
       "Teléfono": 339789654,
       "Correo": "rafael.reyes@hotmail.com",
       "NumeroDocumento": 1548952164,
-      "MesesAtrasados": 4
+      "MesesAtrasados": 4,
+      "EspacioParqueadero": 0,
+      "User": "generic1",
+      "Pass": "passG1"
     },
     {
       "CodigoVivienda": 1130,
@@ -390,7 +477,10 @@
       "Teléfono": 340123987,
       "Correo": "ines.guzman@yahoo.com",
       "NumeroDocumento": 1548952165,
-      "MesesAtrasados": 1
+      "MesesAtrasados": 1,
+      "EspacioParqueadero": 0,
+      "User": "generic1",
+      "Pass": "passG1"
     }
   ],
   "Parqueadero":[

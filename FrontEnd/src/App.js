@@ -5,7 +5,7 @@ import MainAdmin from "./Pages/auth/admin/mainAdmin";
 import LoginAdministrador from "./Pages/auth/Login/LoginAdministrador";
 import LoginPortero from "./Pages/auth/Login/LoginPortero";
 import LoginPropietario from "./Pages/auth/Login/LoginPropietario";
-import VistaPropietario from "./Pages/auth/propietario/VistaPropietario";
+import MainPropietario from "./Pages/auth/propietario/mainPropietario";
 import MainPortero from "./Pages/auth/portero/mainPortero.";
 import RegisterPropietario from "./Pages/auth/Login/RegisterPropietario";
 import InsertForm from "./Pages/auth/admin/insertForm";
@@ -52,9 +52,9 @@ function App() {
             element={<LoginPropietario />}
           ></Route>
           <Route
-            path="VistaPropietario"
+            path="MainPropietario"
             exact
-            element={<VistaPropietario />}
+            element={<MainPropietario />}
           ></Route>
           <Route path="InsertForm" exact element={<InsertForm />}></Route>
         </Routes>

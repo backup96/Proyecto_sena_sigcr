@@ -3,7 +3,7 @@ import React from "react";
 import { NavBar } from "../../../Components/Componentes_Propietario/navBar";
 import SideBar from "../../../Components/Componentes_Propietario/sideBar";
 
-const VistaPropietario = () => {
+const MainPropietario = () => {
   return (
     <>
       <div className="d-flex flex-column vh-100">
@@ -18,4 +18,4 @@ const VistaPropietario = () => {
   );
 };
 
-export default VistaPropietario;
+export default MainPropietario;
