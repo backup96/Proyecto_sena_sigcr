@@ -4,9 +4,8 @@ import { Link } from "react-router-dom";
 import myImg from "../../img/logo2.png"; /* Importación logo del conjunto */
 
 /* Creación del componente Main */
-class Main extends Component {
+const Main = () => {
   /* Definición del metodo render() para el componente de clase Main */
-  render() {
     return (
       <div className="">
         <main
@@ -85,8 +84,7 @@ class Main extends Component {
           <p>© 2024 Mi Página. Todos los derechos reservados.</p>
         </footer>
       </div>
-    );
-  }
+  );
 }
 
 export default Main; /* Sentencia para la exportación del modulo 

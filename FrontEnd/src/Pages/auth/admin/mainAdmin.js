@@ -1,14 +1,8 @@
 /* Importación de paquetes necesarios */
 import React from "react"; /* Paquete necesario para manipular el estado del componente de clase MainAdmin */
 /* Importación de iconos */
-import { NavBar } from "../../../Components/navBar";
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { faTrash } from "@fortawesome/free-solid-svg-icons";
-import { faPenToSquare } from "@fortawesome/free-solid-svg-icons";
-import SideBar from "../../../Components/sideBar";
-/* Añadir iconos a la libraria */
-library.add(faTrash);
-library.add(faPenToSquare);
+import { NavBar } from "../../../Components/Componentes_Admin/navBar";
+import SideBar from "../../../Components/Componentes_Admin/sideBar";
 
 /* Componente de clase MainAdmin */
 export function MainAdmin() {

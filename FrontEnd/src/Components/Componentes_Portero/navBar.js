@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import myImg from "../img/logo2.png"; /* Logo del conjutno */
+import myImg from "../../img/logo2.png"; /* Logo del conjutno */
 
 export function NavBar() {
   return (
@@ -21,21 +21,6 @@ export function NavBar() {
         </button>
         <div className="collapse navbar-collapse" id="navConetent">
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li className="nav-item mx-3">
-              <Link className="btn btn-light active" aria-current="page" to="#">
-                Solicitudes
-              </Link>
-            </li>
-            <li className="nav-item mx-3">
-              <Link className="btn btn-light" to="#">
-                Enviar información
-              </Link>
-            </li>
-            <li className="nav-item mx-3">
-              <Link className="btn btn-light" to="#">
-                Generar reporte
-              </Link>
-            </li>
             <li className="nav-item mx-3">
               <Link className="btn btn-light" to="/">
                 Cerrar Sesion
