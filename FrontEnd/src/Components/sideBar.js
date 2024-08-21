@@ -85,7 +85,7 @@ const SideBar = () => {
                   onClick={() => setCurrentTable("SalonComunal")}
                   href="#"
                   className={
-                    currentTable === "Salon Comunal"
+                    currentTable === "SalonComunal"
                       ? "nav-link active"
                       : "nav-link text-white"
                   }
