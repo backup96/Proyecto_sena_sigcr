@@ -1,21 +1,22 @@
 /* Importación de paquetes necesarios */
-import React from "react"; /* Paquete necesario para manipular el estado del componente de clase MainAdmin */
+import React, { useEffect } from "react"; /* Paquete necesario para manipular el estado del componente de clase MainAdmin */
+import { useNavigate } from "react-router-dom";
 /* Importación de iconos */
 import { NavBar } from "../../../Components/Componentes_Admin/navBar";
-import SideBar from "../../../Components/Componentes_Admin/sideBar";
+import { useUser } from "../../../userContext";
 
 /* Componente de clase MainAdmin */
 export function MainAdmin() {
+  const { user } = useUser();
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (!user) {
+      navigate("/LoginAdministrador");
+    }
+  });
     return (
     <>
-      <div className="d-flex flex-column vh-100">
-        <div>
-          <NavBar />
-        </div>
-        <div className="h-100">
-          <SideBar />
-        </div>
-      </div>
+      <NavBar /> 
     </>
   );
 }

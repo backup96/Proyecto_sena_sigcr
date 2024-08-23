@@ -1,5 +1,5 @@
 /* Importación de los paquetes necesarios */
-import React, { Component } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import myImg from "../../img/logo2.png"; /* Importación logo del conjunto */
 

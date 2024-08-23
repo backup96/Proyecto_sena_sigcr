@@ -14,24 +14,6 @@ function App() {
     <Fragment>
       <Router>
         <Routes>
-          {/* <Route path="/" exact element={<Main />}></Route>
-          <Route path="MainAdmin" exact element={<MainAdmin />}></Route>
-          <Route
-            path="LoginAdministrador"
-            exact
-            element={<LoginAdministrador />}
-          ></Route>
-          <Route path="LoginPortero" exact element={<LoginPortero />}></Route>
-          <Route
-            path="LoginPropietario"
-            exact
-            element={<LoginPropietario />}
-          ></Route>
-          <Route
-            path="VistaPropietario"
-            exact
-            element={<VistaPropietario />}
-          ></Route> */}
           <Route path="/" exact element={<Main />}></Route>
           <Route path="MainAdmin" exact element={<MainAdmin />}></Route>
           <Route path="MainPortero" exact element={<MainPortero />}></Route>

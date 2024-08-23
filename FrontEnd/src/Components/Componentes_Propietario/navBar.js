@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
 import myImg from "../../img/logo2.png"; /* Logo del conjutno */
+import { useUser } from "../../userContext";
 
 export function NavBar() {
+  
+  const { setUser: setContextUser } = useUser();
   return (
     <nav className="navbar navbar-expand-lg navbar-dark w-100 bg-dark">
       <div className="container px-lg-5">
@@ -27,7 +30,11 @@ export function NavBar() {
               </Link>
             </li>
             <li className="nav-item mx-3">
-              <Link className="btn btn-light" to="/">
+              <Link
+                onClick={() => setContextUser(null)}
+                className="btn btn-light"
+                to="/"
+              >
                 Cerrar Sesion
               </Link>
             </li>

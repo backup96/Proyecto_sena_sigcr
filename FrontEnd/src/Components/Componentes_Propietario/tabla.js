@@ -1,13 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { faTrash } from "@fortawesome/free-solid-svg-icons";
-import { faPenToSquare } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
-/* Añadir iconos a la libraria */
-library.add(faTrash);
-library.add(faPenToSquare);
 
 const Tabla = ({ apiS }) => {
   const [currentPageMoto, setcurrentPageMoto] = useState(1);
@@ -29,7 +22,7 @@ const Tabla = ({ apiS }) => {
         const responseCarro = await axios.get(`http://localhost:4000/${apiS}?TipoEspacio=Carro`);
         setdataCarro(responseCarro.data);
 
-        if ((responseMoto.data.length > 0) && (setdataCarro.data.length > 0)) {
+        if (responseMoto.data.length > 0 && responseCarro.data.length > 0) {
           console.log("holle");
         } else {
           console.log("Bywe");
