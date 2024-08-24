@@ -5,6 +5,7 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import { faPenToSquare } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
+import Solicitudes from "./solicitudes";
 /* Añadir iconos a la libraria */
 library.add(faTrash);
 library.add(faPenToSquare);
@@ -21,10 +22,8 @@ const Tabla = ({ item, apiS }) => {
         const response = await axios.get(`http://localhost:4000/${apiS}`);
         setDatos(response.data);
 
-        if (response.data.length > 0) {
-          console.log("holle");
-        } else {
-          console.log("Bywe");
+        if (response.data.length === 0) {
+          setDatos([])
         }
       } catch (error) {
         console.error("Error al obtener los apartamentos:", error);
@@ -33,6 +32,7 @@ const Tabla = ({ item, apiS }) => {
 
     fetchApartamentos();
   }, [apiS]);
+
 
   const indexOfLastRecord = currentPage * recordsPerPage;
   const indexOfFirstRecord = indexOfLastRecord - recordsPerPage;
@@ -63,20 +63,8 @@ const Tabla = ({ item, apiS }) => {
             className="dataTables_wrapper dt-bootstrap4"
           >
             {apiS === "Solicitudes" ? (
-              <div className="card">
-                <div className="card-header">Featured</div>
-                <div className="card-body">
-                  <h5 className="card-title">Special title treatment</h5>
-                  <p className="card-text">
-                    With supporting text below as a natural lead-in to
-                    additional content.
-                  </p>
-                  <a href="#" className="btn btn-primary">
-                    Go somewhere
-                  </a>
-                </div>
-              </div>
-            ) : ( 
+              <Solicitudes currentRecords={data} length={data.length} />
+            ) : (
               <>
                 <div className="row">
                   <div className="col-sm-12">
@@ -327,7 +315,7 @@ const Tabla = ({ item, apiS }) => {
                     </div>
                   </div>
                 </div>
-              </> 
+              </>
             )}
           </div>
         </div>

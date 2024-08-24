@@ -7,7 +7,7 @@ import myImg from "../../img/logo2.png"; /* Importación logo del conjunto */
 const Main = () => {
   /* Definición del metodo render() para el componente de clase Main */
     return (
-      <div className="">
+      <div>
         <main
           className="container shadow-lg p-3 mb-5 my-5 
         bg-light border border-success rounded"

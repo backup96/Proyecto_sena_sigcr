@@ -19,7 +19,9 @@ const Tabla = ({ apiS }) => {
       try {
         const responseMoto = await axios.get(`http://localhost:4000/${apiS}?TipoEspacio=Moto`);
         setdataMoto(responseMoto.data);
-        const responseCarro = await axios.get(`http://localhost:4000/${apiS}?TipoEspacio=Carro`);
+        const responseCarro = await axios.get(
+          `http://localhost:4000/${apiS}?TipoEspacio=Carro&Estado=Disponible`
+        );
         setdataCarro(responseCarro.data);
 
         if (responseMoto.data.length > 0 && responseCarro.data.length > 0) {

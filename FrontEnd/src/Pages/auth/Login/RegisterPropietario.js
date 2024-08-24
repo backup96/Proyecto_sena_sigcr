@@ -23,6 +23,7 @@ const RegisterPropietario = () => {
     try {
       // Solicitud GET para obtener los datos del usuario
       const response = await axios.post(`http://localhost:4000/Solicitudes`, {
+        id: propietario.NumeroDocumento,
         Nombre: propietario.Nombre,
         Apellido: propietario.Apellido,
         NumeroDocumento: propietario.NumeroDocumento,
