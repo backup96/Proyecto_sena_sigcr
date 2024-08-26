@@ -602,181 +602,211 @@
       "NumeroEspacio": 1,
       "TipoEspacio": "Moto",
       "Estado": "Disponible",
-      "id": "383f"
+      "id": "0bbe"
     },
     {
       "NumeroEspacio": 2,
       "TipoEspacio": "Carro",
-      "Estado": "Ocupado",
-      "id": "0ef0"
+      "Estado": "Disponible",
+      "id": "1ca2"
     },
     {
       "NumeroEspacio": 3,
       "TipoEspacio": "Moto",
-      "Estado": "Disponible",
-      "id": "f83b"
+      "Estado": "Ocupado",
+      "id": "4eb4"
     },
     {
       "NumeroEspacio": 4,
       "TipoEspacio": "Carro",
-      "Estado": "Ocupado",
-      "id": "af6e"
+      "Estado": "Disponible",
+      "id": "0b2c"
     },
     {
       "NumeroEspacio": 5,
       "TipoEspacio": "Moto",
       "Estado": "Disponible",
-      "id": "f6e3"
+      "id": "6c09"
     },
     {
       "NumeroEspacio": 6,
       "TipoEspacio": "Carro",
-      "Estado": "Ocupado",
-      "id": "bb0a"
+      "Estado": "Disponible",
+      "id": "1961"
     },
     {
       "NumeroEspacio": 7,
       "TipoEspacio": "Moto",
-      "Estado": "Disponible",
-      "id": "00d4"
+      "Estado": "Ocupado",
+      "id": "e8cd"
     },
     {
       "NumeroEspacio": 8,
       "TipoEspacio": "Carro",
-      "Estado": "Ocupado",
-      "id": "a942"
+      "Estado": "Disponible",
+      "id": "9da7"
     },
     {
       "NumeroEspacio": 9,
       "TipoEspacio": "Moto",
       "Estado": "Disponible",
-      "id": "bfb7"
+      "id": "aac5"
     },
     {
       "NumeroEspacio": 10,
       "TipoEspacio": "Carro",
       "Estado": "Ocupado",
-      "id": "f21b"
+      "id": "2f15"
     },
     {
       "NumeroEspacio": 11,
       "TipoEspacio": "Moto",
       "Estado": "Disponible",
-      "id": "0f79"
+      "id": "46c8"
     },
     {
       "NumeroEspacio": 12,
       "TipoEspacio": "Carro",
-      "Estado": "Ocupado",
-      "id": "aafc"
+      "Estado": "Disponible",
+      "id": "8549"
     },
     {
       "NumeroEspacio": 13,
       "TipoEspacio": "Moto",
-      "Estado": "Disponible",
-      "id": "f5a5"
+      "Estado": "Ocupado",
+      "id": "d6c1"
     },
     {
       "NumeroEspacio": 14,
       "TipoEspacio": "Carro",
-      "Estado": "Ocupado",
-      "id": "bc41"
+      "Estado": "Disponible",
+      "id": "bf6f"
     },
     {
       "NumeroEspacio": 15,
       "TipoEspacio": "Moto",
       "Estado": "Disponible",
-      "id": "1aa9"
+      "id": "daa4"
     },
     {
       "NumeroEspacio": 16,
       "TipoEspacio": "Carro",
-      "Estado": "Ocupado",
-      "id": "5d9b"
+      "Estado": "Disponible",
+      "id": "e21e"
     },
     {
       "NumeroEspacio": 17,
       "TipoEspacio": "Moto",
       "Estado": "Disponible",
-      "id": "cb30"
+      "id": "76cf"
     },
     {
       "NumeroEspacio": 18,
       "TipoEspacio": "Carro",
       "Estado": "Ocupado",
-      "id": "2da7"
+      "id": "94fb"
     },
     {
       "NumeroEspacio": 19,
       "TipoEspacio": "Moto",
       "Estado": "Disponible",
-      "id": "54ca"
+      "id": "bdc5"
     },
     {
       "NumeroEspacio": 20,
       "TipoEspacio": "Carro",
-      "Estado": "Ocupado",
-      "id": "74dd"
+      "Estado": "Disponible",
+      "id": "94e1"
     },
     {
       "NumeroEspacio": 21,
       "TipoEspacio": "Moto",
       "Estado": "Disponible",
-      "id": "a07b"
+      "id": "976c"
     },
     {
       "NumeroEspacio": 22,
       "TipoEspacio": "Carro",
-      "Estado": "Ocupado",
-      "id": "3bad"
+      "Estado": "Disponible",
+      "id": "04ab"
     },
     {
       "NumeroEspacio": 23,
       "TipoEspacio": "Moto",
-      "Estado": "Disponible",
-      "id": "b00d"
+      "Estado": "Ocupado",
+      "id": "e0f4"
     },
     {
       "NumeroEspacio": 24,
       "TipoEspacio": "Carro",
-      "Estado": "Ocupado",
-      "id": "f34a"
+      "Estado": "Disponible",
+      "id": "73eb"
     },
     {
       "NumeroEspacio": 25,
       "TipoEspacio": "Moto",
       "Estado": "Disponible",
-      "id": "f971"
+      "id": "766d"
     },
     {
       "NumeroEspacio": 26,
       "TipoEspacio": "Carro",
-      "Estado": "Ocupado",
-      "id": "5c33"
+      "Estado": "Disponible",
+      "id": "da84"
     },
     {
       "NumeroEspacio": 27,
       "TipoEspacio": "Moto",
       "Estado": "Disponible",
-      "id": "1b5a"
+      "id": "4d22"
     },
     {
       "NumeroEspacio": 28,
       "TipoEspacio": "Carro",
       "Estado": "Ocupado",
-      "id": "1b44"
+      "id": "c575"
     },
     {
       "NumeroEspacio": 29,
       "TipoEspacio": "Moto",
       "Estado": "Disponible",
-      "id": "26c9"
+      "id": "113d"
     },
     {
       "NumeroEspacio": 30,
       "TipoEspacio": "Carro",
+      "Estado": "Disponible",
+      "id": "1456"
+    },
+    {
+      "NumeroEspacio": 31,
+      "TipoEspacio": "Carro",
+      "Estado": "Disponible",
+      "id": "a1b2"
+    },
+    {
+      "NumeroEspacio": 32,
+      "TipoEspacio": "Moto",
       "Estado": "Ocupado",
-      "id": "5ecc"
+      "id": "a1b3"
+    },
+    {
+      "NumeroEspacio": 33,
+      "TipoEspacio": "Carro",
+      "Estado": "Disponible",
+      "id": "a1b4"
+    },
+    {
+      "NumeroEspacio": 34,
+      "TipoEspacio": "Carro",
+      "Estado": "Ocupado",
+      "id": "a1b5"
+    },
+    {
+      "NumeroEspacio": 35,
+      "TipoEspacio": "Moto",
+      "Estado": "Ocupado",
+      "id": "a1b6"
     }
   ],
   "Invitados": [
@@ -1089,7 +1119,7 @@
       "Teléfono": 1589753698,
       "Fecha": "2024-12-31",
       "ValorAlquiler": 300000,
-      "id": "fe4e"
+      "id": "9cf9"
     },
     {
       "NumeroCita": 2,
@@ -1098,7 +1128,7 @@
       "Teléfono": 1589753699,
       "Fecha": "2024-12-30",
       "ValorAlquiler": 320000,
-      "id": "ca26"
+      "id": "81f0"
     },
     {
       "NumeroCita": 3,
@@ -1107,7 +1137,7 @@
       "Teléfono": 1589753700,
       "Fecha": "2024-12-29",
       "ValorAlquiler": 310000,
-      "id": "0a31"
+      "id": "c836"
     },
     {
       "NumeroCita": 4,
@@ -1116,7 +1146,7 @@
       "Teléfono": 1589753701,
       "Fecha": "2024-12-28",
       "ValorAlquiler": 305000,
-      "id": "e463"
+      "id": "807c"
     },
     {
       "NumeroCita": 5,
@@ -1125,7 +1155,7 @@
       "Teléfono": 1589753702,
       "Fecha": "2024-12-27",
       "ValorAlquiler": 290000,
-      "id": "64c4"
+      "id": "6750"
     },
     {
       "NumeroCita": 6,
@@ -1134,7 +1164,7 @@
       "Teléfono": 1589753703,
       "Fecha": "2024-12-26",
       "ValorAlquiler": 330000,
-      "id": "ac88"
+      "id": "f4cb"
     },
     {
       "NumeroCita": 7,
@@ -1143,7 +1173,7 @@
       "Teléfono": 1589753704,
       "Fecha": "2024-12-25",
       "ValorAlquiler": 300000,
-      "id": "57e8"
+      "id": "618b"
     },
     {
       "NumeroCita": 8,
@@ -1152,7 +1182,7 @@
       "Teléfono": 1589753705,
       "Fecha": "2024-12-24",
       "ValorAlquiler": 320000,
-      "id": "8e76"
+      "id": "5c3c"
     },
     {
       "NumeroCita": 9,
@@ -1161,7 +1191,7 @@
       "Teléfono": 1589753706,
       "Fecha": "2024-12-23",
       "ValorAlquiler": 310000,
-      "id": "eeb5"
+      "id": "ce6f"
     },
     {
       "NumeroCita": 10,
@@ -1170,7 +1200,7 @@
       "Teléfono": 1589753707,
       "Fecha": "2024-12-22",
       "ValorAlquiler": 305000,
-      "id": "1821"
+      "id": "bf23"
     },
     {
       "NumeroCita": 11,
@@ -1179,7 +1209,7 @@
       "Teléfono": 1589753708,
       "Fecha": "2024-12-21",
       "ValorAlquiler": 290000,
-      "id": "40ef"
+      "id": "a50a"
     },
     {
       "NumeroCita": 12,
@@ -1188,7 +1218,7 @@
       "Teléfono": 1589753709,
       "Fecha": "2024-12-20",
       "ValorAlquiler": 330000,
-      "id": "5a4c"
+      "id": "a080"
     },
     {
       "NumeroCita": 13,
@@ -1197,7 +1227,7 @@
       "Teléfono": 1589753710,
       "Fecha": "2024-12-19",
       "ValorAlquiler": 300000,
-      "id": "4079"
+      "id": "e9b2"
     },
     {
       "NumeroCita": 14,
@@ -1206,7 +1236,7 @@
       "Teléfono": 1589753711,
       "Fecha": "2024-12-18",
       "ValorAlquiler": 320000,
-      "id": "60f2"
+      "id": "6f78"
     },
     {
       "NumeroCita": 15,
@@ -1215,7 +1245,7 @@
       "Teléfono": 1589753712,
       "Fecha": "2024-12-17",
       "ValorAlquiler": 310000,
-      "id": "254e"
+      "id": "76ba"
     },
     {
       "NumeroCita": 16,
@@ -1224,7 +1254,7 @@
       "Teléfono": 1589753713,
       "Fecha": "2024-12-16",
       "ValorAlquiler": 305000,
-      "id": "e1e6"
+      "id": "866f"
     },
     {
       "NumeroCita": 17,
@@ -1233,7 +1263,7 @@
       "Teléfono": 1589753714,
       "Fecha": "2024-12-15",
       "ValorAlquiler": 290000,
-      "id": "b951"
+      "id": "9425"
     },
     {
       "NumeroCita": 18,
@@ -1242,7 +1272,7 @@
       "Teléfono": 1589753715,
       "Fecha": "2024-12-14",
       "ValorAlquiler": 330000,
-      "id": "5473"
+      "id": "cc7d"
     },
     {
       "NumeroCita": 19,
@@ -1251,7 +1281,7 @@
       "Teléfono": 1589753716,
       "Fecha": "2024-12-13",
       "ValorAlquiler": 300000,
-      "id": "a098"
+      "id": "ba76"
     },
     {
       "NumeroCita": 20,
@@ -1260,7 +1290,7 @@
       "Teléfono": 1589753717,
       "Fecha": "2024-12-12",
       "ValorAlquiler": 320000,
-      "id": "f3c9"
+      "id": "317f"
     },
     {
       "NumeroCita": 21,
@@ -1269,7 +1299,7 @@
       "Teléfono": 1589753718,
       "Fecha": "2024-12-11",
       "ValorAlquiler": 310000,
-      "id": "00da"
+      "id": "d9d1"
     },
     {
       "NumeroCita": 22,
@@ -1278,7 +1308,7 @@
       "Teléfono": 1589753719,
       "Fecha": "2024-12-10",
       "ValorAlquiler": 305000,
-      "id": "868e"
+      "id": "0516"
     },
     {
       "NumeroCita": 23,
@@ -1287,7 +1317,7 @@
       "Teléfono": 1589753720,
       "Fecha": "2024-12-09",
       "ValorAlquiler": 290000,
-      "id": "ebb2"
+      "id": "4c8e"
     },
     {
       "NumeroCita": 24,
@@ -1296,7 +1326,7 @@
       "Teléfono": 1589753721,
       "Fecha": "2024-12-08",
       "ValorAlquiler": 330000,
-      "id": "bf44"
+      "id": "ba55"
     },
     {
       "NumeroCita": 25,
@@ -1305,7 +1335,31 @@
       "Teléfono": 1589753722,
       "Fecha": "2024-12-07",
       "ValorAlquiler": 300000,
-      "id": "0b74"
+      "id": "ff4e"
+    }
+  ],
+  "ReservaSalon": [
+    {
+      "id": "2497",
+      "Nombre": "Denys Fontecha",
+      "NumeroDocumento": "1548952136",
+      "Telefono": "325654785",
+      "CodigoVivienda": "1101",
+      "HoraInicio": "22:00",
+      "HoraFin": "03:00",
+      "Motivo": "reunion",
+      "Fecha": "2024-08-24"
+    },
+    {
+      "id": "dca8",
+      "Nombre": "Joan",
+      "NumeroDocumento": "123465798",
+      "Telefono": "200315",
+      "CodigoVivienda": "1101",
+      "HoraInicio": "11:10",
+      "HoraFin": "16:10",
+      "Motivo": "no lo se",
+      "Fecha": "2024-08-26"
     }
   ],
   "Reuniones": [
@@ -1314,175 +1368,175 @@
       "Motivo": "Repartición espacios del Parqueadero",
       "Fecha": "2024-12-31",
       "Horario": "13:30:00 - 18:45:00",
-      "id": "4812"
+      "id": "b0b8"
     },
     {
       "NumeroReunion": 2,
       "Motivo": "Revisión de contratos de alquiler",
       "Fecha": "2024-12-30",
       "Horario": "09:00:00 - 12:00:00",
-      "id": "2fa2"
+      "id": "f05b"
     },
     {
       "NumeroReunion": 3,
       "Motivo": "Evaluación de costos de mantenimiento",
       "Fecha": "2024-12-29",
       "Horario": "10:00:00 - 15:00:00",
-      "id": "16e8"
+      "id": "7d0a"
     },
     {
       "NumeroReunion": 4,
       "Motivo": "Actualización de reglamentos internos",
       "Fecha": "2024-12-28",
       "Horario": "14:00:00 - 16:00:00",
-      "id": "31f8"
+      "id": "4ba9"
     },
     {
       "NumeroReunion": 5,
       "Motivo": "Planificación de eventos comunitarios",
       "Fecha": "2024-12-27",
       "Horario": "11:00:00 - 13:00:00",
-      "id": "686e"
+      "id": "3802"
     },
     {
       "NumeroReunion": 6,
       "Motivo": "Discusión sobre mejoras en seguridad",
       "Fecha": "2024-12-26",
       "Horario": "15:00:00 - 17:00:00",
-      "id": "a4ba"
+      "id": "4a69"
     },
     {
       "NumeroReunion": 7,
       "Motivo": "Revisión de solicitudes de reparación",
       "Fecha": "2024-12-25",
       "Horario": "09:30:00 - 12:30:00",
-      "id": "5d2a"
+      "id": "d5ea"
     },
     {
       "NumeroReunion": 8,
       "Motivo": "Ajustes en el presupuesto anual",
       "Fecha": "2024-12-24",
       "Horario": "13:00:00 - 17:00:00",
-      "id": "951b"
+      "id": "e1fe"
     },
     {
       "NumeroReunion": 9,
       "Motivo": "Análisis de nuevos proyectos",
       "Fecha": "2024-12-23",
       "Horario": "10:30:00 - 14:30:00",
-      "id": "fba9"
+      "id": "3b9c"
     },
     {
       "NumeroReunion": 10,
       "Motivo": "Preparación para auditoría interna",
       "Fecha": "2024-12-22",
       "Horario": "08:00:00 - 12:00:00",
-      "id": "b7f3"
+      "id": "3c38"
     },
     {
       "NumeroReunion": 11,
       "Motivo": "Revisión de políticas de seguridad",
       "Fecha": "2024-12-21",
       "Horario": "11:30:00 - 13:30:00",
-      "id": "937e"
+      "id": "bb7d"
     },
     {
       "NumeroReunion": 12,
       "Motivo": "Estudio de satisfacción de residentes",
       "Fecha": "2024-12-20",
       "Horario": "14:00:00 - 16:00:00",
-      "id": "fa41"
+      "id": "a39e"
     },
     {
       "NumeroReunion": 13,
       "Motivo": "Discusión sobre contratos de proveedores",
       "Fecha": "2024-12-19",
       "Horario": "09:00:00 - 11:00:00",
-      "id": "84e8"
+      "id": "2793"
     },
     {
       "NumeroReunion": 14,
       "Motivo": "Planificación de renovaciones",
       "Fecha": "2024-12-18",
       "Horario": "13:00:00 - 15:00:00",
-      "id": "6736"
+      "id": "b3c8"
     },
     {
       "NumeroReunion": 15,
       "Motivo": "Evaluación de riesgos y seguridad",
       "Fecha": "2024-12-17",
       "Horario": "10:00:00 - 12:00:00",
-      "id": "9856"
+      "id": "792e"
     },
     {
       "NumeroReunion": 16,
       "Motivo": "Actualización de la política de reciclaje",
       "Fecha": "2024-12-16",
       "Horario": "15:00:00 - 17:00:00",
-      "id": "b3f3"
+      "id": "d222"
     },
     {
       "NumeroReunion": 17,
       "Motivo": "Coordinación de actividades para el próximo año",
       "Fecha": "2024-12-15",
       "Horario": "11:00:00 - 13:00:00",
-      "id": "0480"
+      "id": "5363"
     },
     {
       "NumeroReunion": 18,
       "Motivo": "Revisión de informes financieros",
       "Fecha": "2024-12-14",
       "Horario": "08:00:00 - 10:00:00",
-      "id": "e053"
+      "id": "6a90"
     },
     {
       "NumeroReunion": 19,
       "Motivo": "Análisis de propuestas de nuevos servicios",
       "Fecha": "2024-12-13",
       "Horario": "12:00:00 - 14:00:00",
-      "id": "a284"
+      "id": "2b58"
     },
     {
       "NumeroReunion": 20,
       "Motivo": "Evaluación de políticas de atención al cliente",
       "Fecha": "2024-12-12",
       "Horario": "09:00:00 - 11:00:00",
-      "id": "d749"
+      "id": "3b69"
     },
     {
       "NumeroReunion": 21,
       "Motivo": "Revisión de avances en proyectos en curso",
       "Fecha": "2024-12-11",
       "Horario": "13:00:00 - 15:00:00",
-      "id": "7963"
+      "id": "586f"
     },
     {
       "NumeroReunion": 22,
       "Motivo": "Preparación de informes de fin de año",
       "Fecha": "2024-12-10",
       "Horario": "10:00:00 - 12:00:00",
-      "id": "1f86"
+      "id": "3591"
     },
     {
       "NumeroReunion": 23,
       "Motivo": "Discusión sobre mejoras en el servicio de mantenimiento",
       "Fecha": "2024-12-09",
       "Horario": "14:00:00 - 16:00:00",
-      "id": "9742"
+      "id": "b6e0"
     },
     {
       "NumeroReunion": 24,
       "Motivo": "Revisión de políticas de uso de espacios comunes",
       "Fecha": "2024-12-08",
       "Horario": "09:30:00 - 11:30:00",
-      "id": "8714"
+      "id": "0171"
     },
     {
       "NumeroReunion": 25,
       "Motivo": "Planificación de eventos para el próximo año",
       "Fecha": "2024-12-07",
       "Horario": "12:00:00 - 14:00:00",
-      "id": "cc25"
+      "id": "f72d"
     }
   ],
   "Porteros": [
@@ -1779,5 +1833,15 @@
       "id": "a7ce"
     }
   ],
-  "Solicitudes": []
+  "Solicitudes": [
+    {
+      "id": "1033458763",
+      "Nombre": "Lucas",
+      "Apellido": "Moreno",
+      "NumeroDocumento": "1033458763",
+      "Teléfono": "3224567891",
+      "Correo": "lucas@gmail.com",
+      "CodigoVivienda": "1108"
+    }
+  ]
 }
