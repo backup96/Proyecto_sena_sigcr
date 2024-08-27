@@ -70,7 +70,7 @@ export function NavBar() {
             </div>
           </div>
         </nav>
-      </div>  
+      </div>
       <div className="h-100">
         <div className="d-flex flex-row h-100">
           <div>
@@ -148,10 +148,10 @@ export function NavBar() {
                 </li>
                 <li>
                   <Link
-                    onClick={() => setCurrentTable("SalonComunal")}
+                    onClick={() => setCurrentTable("ReservaSalon")}
                     href="#"
                     className={
-                      currentTable === "SalonComunal"
+                      currentTable === "ReservaSalon"
                         ? "nav-link active"
                         : "nav-link text-white"
                     }
@@ -194,26 +194,10 @@ export function NavBar() {
                     Porteros
                   </Link>
                 </li>
-                <li>
-                  <Link
-                    onClick={() => setCurrentTable("Administradores")}
-                    href="#"
-                    className={
-                      currentTable === "Administradores"
-                        ? "nav-link active"
-                        : "nav-link text-white"
-                    }
-                  >
-                    <svg className="bi me-2" width={16} height={16}>
-                      <use xlinkHref="#people-circle" />
-                    </svg>
-                    Administradores
-                  </Link>
-                </li>
               </ul>
               <hr />
             </div>
-          </div> 
+          </div>
           <Tabla
             item={
               currentTable === "Apartamentos"
@@ -239,15 +223,8 @@ export function NavBar() {
                     "Costo",
                     "Codigo de Vivienda",
                   ]
-                : currentTable === "SalonComunal"
-                ? [
-                    "Numero de Cita",
-                    "Nombre del solicitante",
-                    "Numero de Documento",
-                    "Teléfono",
-                    "Fecha",
-                    "Valor del Alquiler",
-                  ]
+                : currentTable === "ReservaSalon"
+                ? []
                 : currentTable === "Reuniones"
                 ? ["Numero de Reunion", "Motivo", "Fecha", "Horario"]
                 : currentTable === "Porteros"

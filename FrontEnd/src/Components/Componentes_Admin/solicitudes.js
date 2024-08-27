@@ -15,6 +15,7 @@ const Solicitudes = ({ currentRecords, length }) => {
     Pass: "",
     id: "",
   });
+
   const enviar = async (e) => {
     e.preventDefault();
 
@@ -49,7 +50,6 @@ const Solicitudes = ({ currentRecords, length }) => {
     e.preventDefault();
 
     try {
-
       const response = await axios.delete(
         `http://localhost:4000/Solicitudes/${data.NumeroDocumento}`
       );
