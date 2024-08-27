@@ -14,10 +14,11 @@ const Propietario = ({ item, currentRecords, apiS }) => {
   const [accion, setAccion] = useState("");
 
   const [propietarios, setPropietarios] = useState({
-    CodigoVivienda: 1101,
+    CodigoVivienda: "",
     Nombre: "",
     Teléfono: "",
     Correo: "",
+    EstadoEnvio: "",
     NumeroDocumento: "",
     MesesAtrasados: "",
     EspacioParqueadero: "",
@@ -39,6 +40,7 @@ const Propietario = ({ item, currentRecords, apiS }) => {
               Nombre: propietarios.Nombre,
               Teléfono: propietarios.Teléfono,
               Correo: propietarios.Correo,
+              EstadoEnvio: propietarios.EstadoEnvio,
               NumeroDocumento: propietarios.NumeroDocumento,
               MesesAtrasados: propietarios.MesesAtrasados,
               EspacioParqueadero: propietarios.EspacioParqueadero,
@@ -72,6 +74,7 @@ const Propietario = ({ item, currentRecords, apiS }) => {
           Nombre: propietarios.Nombre,
           Teléfono: propietarios.Teléfono,
           Correo: propietarios.Correo,
+          EstadoEnvio: propietarios.EstadoEnvio,
           NumeroDocumento: propietarios.NumeroDocumento,
           MesesAtrasados: propietarios.MesesAtrasados,
           EspacioParqueadero: propietarios.EspacioParqueadero,

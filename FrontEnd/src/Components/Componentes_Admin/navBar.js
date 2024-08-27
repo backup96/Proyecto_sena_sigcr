@@ -48,12 +48,20 @@ export function NavBar() {
                   </Link>
                 </li>
                 <li className="nav-item mx-3">
-                  <Link className="btn btn-light" to="#">
+                  <Link
+                    className="btn btn-light"
+                    to="#"
+                    onClick={() => setCurrentTable("Informacion")}
+                  >
                     Enviar información
                   </Link>
                 </li>
                 <li className="nav-item mx-3">
-                  <Link className="btn btn-light" to="#">
+                  <Link
+                    className="btn btn-light"
+                    to="#"
+                    onClick={() => setCurrentTable("Reporte")}
+                  >
                     Generar reporte
                   </Link>
                 </li>
@@ -237,6 +245,14 @@ export function NavBar() {
                   ]
                 : currentTable === "Solicitudes"
                 ? []
+                : currentTable === "Informacion"
+                ? []
+                : currentTable === "Reporte"
+                ? [
+                    "Codigo de vivienda",
+                    "Nombre",
+                    "Saldo de deuda",
+                  ]
                 : null
             }
             apiS={currentTable}
