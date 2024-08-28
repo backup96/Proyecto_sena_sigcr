@@ -3,76 +3,57 @@ import Tabla from "./tabla";
 import { useState } from "react";
 
 const SideBar = () => {
-    const [currentTable, setCurrentTable] = useState("Invitados");
+  const [currentTable, setCurrentTable] = useState("Propietarios");
+
   return (
-    <>
-      <div className="d-flex flex-row h-100">
-        <div>
-          <div
-            className="d-flex flex-column p-3 text-white bg-dark h-100"
-            style={{ width: 280 }}
-          >
-            <hr />
-            <ul className="nav nav-pills flex-column mb-auto">
-              <li className="nav-item">
-                <Link
-                  onClick={() => setCurrentTable("Invitados")}
-                  id="myLink"
-                  href="#"
-                  className={
-                    currentTable === "Invitados"
-                      ? "nav-link active"
-                      : "nav-link text-white"
-                  }
-                  aria-current="page"
-                >
-                  <svg className="bi me-2" width={16} height={16}>
-                    <use xlinkHref="#home" />
-                  </svg>
-                  Invitados
-                </Link>
-              </li>
-              <li>
-                <Link
-                  onClick={() => setCurrentTable("Propietarios")}
-                  href="#"
-                  className={
-                    currentTable === "Propietarios"
-                      ? "nav-link active"
-                      : "nav-link text-white"
-                  }
-                >
-                  <svg className="bi me-2" width={16} height={16}>
-                    <use xlinkHref="#speedometer2" />
-                  </svg>
-                  Propietarios
-                </Link>
-              </li>
-              <li>
-                <Link
-                  onClick={() => setCurrentTable("Parqueadero")}
-                  href="#"
-                  className={
-                    currentTable === "Parqueadero"
-                      ? "nav-link active"
-                      : "nav-link text-white"
-                  }
-                >
-                  <svg className="bi me-2" width={16} height={16}>
-                    <use xlinkHref="#table" />
-                  </svg>
-                  Parqueadero
-                </Link>
-              </li>
-            </ul>
-            <hr />
-          </div>
-        </div>
+    <div className="d-flex h-100">
+      <div className="bg-dark text-white p-3" style={{ width: 280 }}>
+        <h4 className="text-center">Menú</h4>
+        <hr />
+        <ul className="nav nav-pills flex-column mb-auto">
+          <li className="nav-item">
+            <Link
+              onClick={() => setCurrentTable("Propietarios")}
+              href="#"
+              className={`nav-link ${
+                currentTable === "Propietarios" ? "active" : "text-white"
+              }`}
+            >
+              <i className="bi bi-house-door me-2"></i>
+              Propietarios
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link
+              onClick={() => setCurrentTable("Parqueadero")}
+              href="#"
+              className={`nav-link ${
+                currentTable === "Parqueadero" ? "active" : "text-white"
+              }`}
+            >
+              <i className="bi bi-car-front me-2"></i>
+              Parqueadero
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link
+              onClick={() => setCurrentTable("Invitados")}
+              href="#"
+              className={`nav-link ${
+                currentTable === "Invitados" ? "active" : "text-white"
+              }`}
+            >
+              <i className="bi bi-person-lines-fill me-2"></i>
+              Invitados
+            </Link>
+          </li>
+        </ul>
+        <hr />
+      </div>
+      <div className="flex-grow-1 p-3">
         <Tabla
           item={
-            currentTable === "Invitados"
-              ? ["Nombre", "Numero de Documento", "Teléfono", "Correo"]
-              : currentTable === "Propietarios"
+            currentTable === "Propietarios"
               ? [
                   "Codigo de vivienda",
                   "Nombre",
@@ -92,32 +73,15 @@ const SideBar = () => {
                   "Numero de parqueadero",
                   "Costo",
                   "Codigo de Vivienda",
-                ]
-              : currentTable === "SalonComunal"
-              ? [
-                  "Numero de Cita",
-                  "Nombre del solicitante",
-                  "Numero de Documento",
-                  "Teléfono",
-                  "Fecha",
-                  "Valor del Alquiler",
-                ]
-              : currentTable === "Reuniones"
-              ? ["Numero de Reunion", "Motivo", "Fecha", "Horario"]
-              : currentTable === "Porteros"
-              ? [
-                  "Nombre",
-                  "Numero de Documento",
-                  "Teléfono",
-                  "Correo",
-                  "Tipo de Turno",
+                  "Tiempo",
+                  "Acciones",
                 ]
               : ["Nombre", "Numero de Documento", "Teléfono", "Correo"]
           }
           apiS={currentTable}
         />
       </div>
-    </>
+    </div>
   );
 };
 

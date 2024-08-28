@@ -6,28 +6,29 @@ export function NavBar() {
   const { setUser: setContextUser } = useUser();
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark w-100 bg-dark">
-      <div className="container px-lg-5">
-        <Link className="text-warning navbar-brand" to="#">
-          <img src={myImg} style={{ width: 70, height: 70 }} alt="Icon"></img>
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div className="container">
+        <Link className="navbar-brand d-flex align-items-center text-light" to="#">
+          <img src={myImg} class="mr-4" alt="Icon" style={{ width: 50, height: 50, borderRadius: 10, }} className="me-2" />
+          CONJUNTO RESIDENCIAL TORRES DE SANTA ISABEL
         </Link>
         <button
           className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#navConetent"
-          aria-controls="navConetent"
+          data-bs-target="#navContent"
+          aria-controls="navContent"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse" id="navConetent">
+        <div className="collapse navbar-collapse" id="navContent">
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li className="nav-item mx-3">
+            <li className="nav-item">
               <Link
                 onClick={() => setContextUser(null)}
-                className="btn btn-light"
+                className="btn btn-outline-light"
                 to="/"
               >
                 Cerrar Sesion
