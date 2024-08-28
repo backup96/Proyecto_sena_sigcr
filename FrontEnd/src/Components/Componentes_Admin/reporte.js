@@ -20,10 +20,12 @@ const Reporte = ({item, currentRecords, apiS}) => {
         return sum
     }
 
-    const generatePDF = (currentRecords) => {
+    const generatePDF = (currentRecords, total) => {
       const doc = new jsPDF();
 
        const pageWidth = doc.internal.pageSize.getWidth();
+       const pageHeight = doc.internal.pageSize.getHeight();
+       let y = 20;
 
        const textCenter = "Reporte saldo de deuda";
        const nombreConjunto = "Torres de Santa Isabel"
@@ -36,16 +38,32 @@ const Reporte = ({item, currentRecords, apiS}) => {
        
       // Agregar texto al PDF
       doc.text(textCenter, x, 20);
+      y += 10;
       doc.text(nombreConjunto, x2, 30);
+      y += 10;
 
       // Agregar una tabla de ejemplo
       doc.text("Codigo de Vivienda", 10, 40);
-      doc.text("Nombre", 40, 40);
-      doc.text("Edad", 100, 40);
+      doc.text("Nombre", 70, 40);
+      doc.text("Saldo de deuda", 130, 40);
+      y += 10;
 
-      currentRecords.map((item, index) => {
-        doc.text(item.CodigoVivienda, 10, 50 + index * 10);
-      });
+        currentRecords.forEach((item, index) => {
+          // Verificar si el contenido se desbordará de la página
+          if (y + 10 > pageHeight) {
+            doc.addPage();
+            y = 20; // Reiniciar `y` para la nueva página
+          }
+
+          // Añadir el contenido de cada registro
+          doc.text(item.CodigoVivienda.toString(), 10, y);
+          doc.text(item.Nombre, 70, y);
+          doc.text((item.MesesAtrasados * 60000).toString(), 130, y);
+          y += 10; // Incrementar `y` para la siguiente línea
+        });
+    doc.text("Total:", 70, y)
+    doc.text(total.toString(), 130, y);
+    y += 10;
 
       // Guardar el PDF
       doc.save("reporte.pdf");
@@ -102,7 +120,7 @@ const Reporte = ({item, currentRecords, apiS}) => {
         <button
           type="button"
           className="btn btn-success p-0 m-0"
-          onClick={() => generatePDF(currentRecords)}
+          onClick={() => generatePDF(currentRecords, total(currentRecords))}
         >
           Generar reporte <FontAwesomeIcon icon={faSquarePlus} />
         </button>

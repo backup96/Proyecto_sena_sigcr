@@ -141,9 +141,9 @@
       "id": "d0cy"
     },
     {
-      "id": "8b5d",
-      "CodigoVivienda": "1502",
-      "NumeroParqueadero": "19"
+      "id": "c451",
+      "CodigoVivienda": "11028",
+      "NumeroParqueadero": "0"
     }
   ],
   "Propietarios": [
@@ -152,7 +152,7 @@
       "Nombre": "Denys Fontecha",
       "Teléfono": 325654785,
       "Correo": "denys@gmail.com",
-      "EstadoEnvio": "No enviado",
+      "EstadoEnvio": "",
       "NumeroDocumento": "154895213",
       "MesesAtrasados": 2,
       "EspacioParqueadero": 0,
@@ -217,7 +217,7 @@
       "Nombre": "Elena Rodríguez",
       "Teléfono": 315654321,
       "Correo": "elena.rodriguez@gmail.com",
-      "EstadoEnvio": "No enviado",
+      "EstadoEnvio": "Enviado",
       "NumeroDocumento": 1548952141,
       "MesesAtrasados": 0,
       "EspacioParqueadero": 0,
@@ -373,7 +373,7 @@
       "Nombre": "Valeria Medina",
       "Teléfono": 327123987,
       "Correo": "valeria.medina@yahoo.com",
-      "EstadoEnvio": "No enviado",
+      "EstadoEnvio": "Enviado",
       "NumeroDocumento": 1548952153,
       "MesesAtrasados": 1,
       "EspacioParqueadero": 0,
@@ -564,24 +564,24 @@
       "Pass": "2541240125"
     },
     {
-      "id": "a7c3",
-      "CodigoVivienda": "1802",
-      "Nombre": "Fabio Gallon",
-      "Teléfono": "3256458974",
-      "Correo": "fabio@gmail.com",
-      "EstadoEnvio": "Enviado",
-      "NumeroDocumento": "1022548963",
+      "id": "7c2a",
+      "CodigoVivienda": "1101",
+      "Nombre": "Joan",
+      "Teléfono": "123456",
+      "Correo": "joan@gmail.com",
+      "EstadoEnvio": "",
+      "NumeroDocumento": "1019763603",
       "MesesAtrasados": "0",
       "EspacioParqueadero": "0",
-      "User": "logan123",
-      "Pass": "contraseña"
+      "User": "joan",
+      "Pass": "27h"
     }
   ],
   "Parqueadero": [
     {
       "NumeroEspacio": "1",
-      "TipoEspacio": "Moto",
-      "Estado": "Ocupado",
+      "TipoEspacio": "Carro",
+      "Estado": "Disponible",
       "id": "0bbe"
     },
     {
@@ -783,7 +783,7 @@
       "id": "a1b5"
     },
     {
-      "id": "9aae",
+      "id": "fd99",
       "NumeroEspacio": "35",
       "TipoEspacio": "Moto",
       "Estado": "Disponible"
@@ -791,7 +791,7 @@
   ],
   "Invitados": [
     {
-      "Nombre": "Mateo Martinez",
+      "Nombre": "Mateo",
       "NumeroDocumento": 1548952136,
       "Teléfono": 325654785,
       "Correo": "mateo.martinez@gmail.com",
@@ -1089,6 +1089,16 @@
       "NumeroParqueadero": "25",
       "Costo": "23000",
       "CodigoVivienda": "1102"
+    },
+    {
+      "id": "e8be",
+      "Nombre": "Angelica",
+      "NumeroDocumento": "132654987",
+      "Teléfono": "12457896",
+      "Correo": "ange@gmail.com",
+      "NumeroParqueadero": "1",
+      "Costo": "30000",
+      "CodigoVivienda": "1101"
     }
   ],
   "ReservaSalon": [
@@ -1105,14 +1115,6 @@
     }
   ],
   "Reuniones": [
-    {
-      "NumeroReunion": 1,
-      "Motivo": "Repartición espacios del Parqueadero",
-      "Fecha": "2024-12-30",
-      "HoraInicio": "13:30:00",
-      "HoraFin": "18:45:00",
-      "id": "b0b8"
-    },
     {
       "NumeroReunion": 2,
       "Motivo": "Revisión de contratos de alquiler",
@@ -1296,19 +1298,17 @@
       "HoraInicio": "13:30:00",
       "HoraFin": "18:45:00",
       "id": "0171"
+    },
+    {
+      "id": "554e",
+      "NumeroReunion": "1",
+      "Motivo": "Dia de la emergencia",
+      "Fecha": "2024-08-01",
+      "HoraInicio": "00:20",
+      "HoraFin": "16:23"
     }
   ],
   "Porteros": [
-    {
-      "Nombre": "Mateo Martinez",
-      "NumeroDocumento": 1548952136,
-      "Teléfono": 325654785,
-      "Correo": "mateo.martinez@gmail.com",
-      "TipoTurno": "Nocturno",
-      "User": "port!1",
-      "Pass": "PassPort1",
-      "id": "062c"
-    },
     {
       "Nombre": "Lucía Gómez",
       "NumeroDocumento": 1548952137,
@@ -1578,6 +1578,16 @@
       "TipoTurno": "Nocturno",
       "User": "Jonathan47",
       "Pass": "passWork"
+    },
+    {
+      "id": "8e82",
+      "Nombre": "Mateo",
+      "NumeroDocumento": "132654987",
+      "Teléfono": "32256469",
+      "Correo": "mateo@gmail.com",
+      "TipoTurno": "Nocturno",
+      "User": "Mateo",
+      "Pass": "PassMateo"
     }
   ],
   "Administrador": [

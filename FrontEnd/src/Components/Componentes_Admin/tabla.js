@@ -58,17 +58,6 @@ const Tabla = ({ item, apiS }) => {
   return (
     <div className="w-100 h-100">
       <div className="card m-0 h-100">
-        <form className="d-flex" role="search">
-          <input
-            className="form-control me-2"
-            type="search"
-            placeholder="Search"
-            aria-label="Search"
-          />
-          <button className="btn btn-outline-success" type="submit">
-            Search
-          </button>
-        </form>
         <div className="card-body">
           <div
             id="example2_wrapper"
@@ -124,11 +113,7 @@ const Tabla = ({ item, apiS }) => {
             ) : apiS === "Informacion" ? (
               <Info currentRecords={currentRecords} apiS={apiS} />
             ) : apiS === "Reporte" ? (
-              <Reporte
-                item={item}
-                currentRecords={data}
-                apiS={apiS}
-              />
+              <Reporte item={item} currentRecords={data} apiS={apiS} />
             ) : null}
 
             {apiS !== "Reporte" ? (

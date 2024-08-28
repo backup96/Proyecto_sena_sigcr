@@ -20,6 +20,10 @@ const Parqueadero = ({ item, currentRecords, apiS }) => {
     id: "",
   });
 
+  const [searchTerm, setSearchTerm] = useState(""); // Estado para el término de búsqueda
+  const [filteredRecords, setFilteredRecords] = useState(currentRecords);
+  const [filteredAtt, setFilteredAtt] = useState("");
+
   const enviar = async (e) => {
     e.preventDefault();
 
@@ -88,225 +92,430 @@ const Parqueadero = ({ item, currentRecords, apiS }) => {
     }
   };
 
+  const fetchFilteredRecords = async (term, att) => {
+    try {
+      if (term) {
+          const response = await axios.get(
+            `http://localhost:4000/${apiS}?${att}=${term}`
+          );
+          if (response.status === 200) {
+            setFilteredRecords(response.data);
+          }
+      } else {
+        setFilteredRecords(currentRecords);
+      }
+    } catch (error) {
+      console.error(error);
+      alert("Ocurrió un error al filtrar los registros");
+    }
+  };
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    fetchFilteredRecords(searchTerm, filteredAtt);
+  };
+
   return (
-    <table
-      id="example2"
-      className="table table-bordered table-hover dataTable dtr-inline"
-      aria-describedby="example2_info"
-    >
-      <thead>
-        <tr>
-          {item.map((item, index) => (
+    <>
+      <form className="d-flex mb-3" role="search" onSubmit={handleSearch}>
+        <input
+          className="form-control me-2"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+          value={searchTerm}
+          onChange={(e) => {
+            setSearchTerm(e.target.value);
+            setFilteredAtt("NumeroEspacio");
+          }}
+        />
+        <select
+          class="form-select"
+          aria-label="Default select example"
+          onChange={(e) => {
+            setSearchTerm(e.target.value);
+            setFilteredAtt("TipoEspacio");
+          }}
+        >
+          <option selected>Open this select menu</option>
+          <option value={"Moto"}>Moto</option>
+          <option value={"Carro"}>Carro</option>
+        </select>
+        <button
+          onClick={() => setCurrentAccion("Consultar")}
+          className="btn btn-outline-success"
+          type="submit"
+        >
+          Search
+        </button>
+      </form>
+      <table
+        id="example2"
+        className="table table-bordered table-hover dataTable dtr-inline"
+        aria-describedby="example2_info"
+      >
+        <thead>
+          <tr>
+            {item.map((item, index) => (
+              <th
+                className="sorting"
+                tabIndex="0"
+                aria-controls="example2"
+                rowSpan="1"
+                colSpan="1"
+                aria-label="Rendering engine: activate to sort column ascending"
+                key={index}
+              >
+                {item}
+              </th>
+            ))}
             <th
               className="sorting"
               tabIndex="0"
               aria-controls="example2"
               rowSpan="1"
               colSpan="1"
-              aria-label="Rendering engine: activate to sort column ascending"
-              key={index}
+              aria-label="Platform(s): activate to sort column ascending"
             >
-              {item}
+              Acciones
             </th>
-          ))}
-          <th
-            className="sorting"
-            tabIndex="0"
-            aria-controls="example2"
-            rowSpan="1"
-            colSpan="1"
-            aria-label="Platform(s): activate to sort column ascending"
-          >
-            Acciones
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        {currentRecords.map((record, index) => (
-          <tr key={index}>
-            <td>{record.NumeroEspacio}</td>
-            <td>{record.TipoEspacio}</td>
-            <td>{record.Estado}</td>
-            <td>
-              <div className="d-flex flex-row">
-                <div className="mx-2">
-                  <form className="p-0" onSubmit={enviar}>
-                    <button
-                      onClick={() => eliminar(record.id)}
-                      type="submit"
-                      class="btn btn-danger px-2"
-                    >
-                      <FontAwesomeIcon icon={faTrash} />
-                    </button>
-                  </form>
-                </div>
-                <div className="mx-2">
-                  <button
-                    type="button"
-                    className="btn btn-warning px-2 py-1"
-                    data-bs-toggle="modal"
-                    data-bs-target="#exampleModal"
-                    onClick={() =>
-                      setParqueadero((prevParqueadero) => ({
-                        ...prevParqueadero,
-                        NumeroEspacio: record.NumeroEspacio,
-                        TipoEspacio: record.TipoEspacio,
-                        Estado: record.Estado,
-                        id: record.id,
-                      }))
-                    }
-                  >
-                    <FontAwesomeIcon icon={faPenToSquare} />
-                  </button>
-                </div>
-              </div>
-              <div
-                class="modal fade"
-                id="exampleModal"
-                tabindex="-1"
-                aria-labelledby="exampleModalLabel"
-                aria-hidden="true"
-              >
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h1 class="modal-title fs-5" id="exampleModalLabel">
-                        {accion} Parqueadero
-                      </h1>
-                      <button
-                        type="button"
-                        class="btn-close"
-                        data-bs-dismiss="modal"
-                        aria-label="Close"
-                      ></button>
-                    </div>
-                    <form onSubmit={enviar}>
-                      <div class="modal-body">
-                        <div className="mb-3">
-                          <label
-                            htmlFor="exampleInputEmail1"
-                            className="form-label"
+          </tr>
+        </thead>
+        <tbody>
+          {accion !== "Consultar"
+            ? currentRecords.map((record, index) => (
+                <tr key={index}>
+                  <td>{record.NumeroEspacio}</td>
+                  <td>{record.TipoEspacio}</td>
+                  <td>{record.Estado}</td>
+                  <td>
+                    <div className="d-flex flex-row">
+                      <div className="mx-2">
+                        <form className="p-0" onSubmit={enviar}>
+                          <button
+                            onClick={() => eliminar(record.id)}
+                            type="submit"
+                            class="btn btn-danger px-2"
                           >
-                            Numero de Espacio
-                          </label>
-                          <input
-                            type="text"
-                            className="form-control"
-                            id="exampleInputEmail1"
-                            required
-                            value={parqueadero.NumeroEspacio}
-                            onChange={(e) =>
-                              setParqueadero((prevParqueadero) => ({
-                                ...prevParqueadero,
-                                NumeroEspacio: e.target.value,
-                              }))
-                            }
-                          />
-                        </div>
-                        <div className="mb-3">
-                          <label
-                            htmlFor="exampleInputPassword1"
-                            className="form-label"
-                          >
-                            Tipo de Espacio
-                          </label>
-                          <input
-                            type="text"
-                            className="form-control"
-                            id="exampleInputPassword1"
-                            required
-                            value={parqueadero.TipoEspacio}
-                            onChange={(e) =>
-                              setParqueadero((prevParqueadero) => ({
-                                ...prevParqueadero,
-                                TipoEspacio: e.target.value,
-                              }))
-                            }
-                          />
-                        </div>
-                        <div className="mb-3">
-                          <label
-                            htmlFor="exampleInputPassword1"
-                            className="form-label"
-                          >
-                            Estado
-                          </label>
-                          <input
-                            type="text"
-                            className="form-control"
-                            id="exampleInputPassword1"
-                            required
-                            value={parqueadero.Estado}
-                            onChange={(e) =>
-                              setParqueadero((prevParqueadero) => ({
-                                ...prevParqueadero,
-                                Estado: e.target.value,
-                              }))
-                            }
-                          />
-                        </div>
+                            <FontAwesomeIcon icon={faTrash} />
+                          </button>
+                        </form>
                       </div>
-                      <div class="modal-footer">
+                      <div className="mx-2">
                         <button
                           type="button"
-                          class="btn btn-danger"
-                          data-bs-dismiss="modal"
+                          className="btn btn-warning px-2 py-1"
+                          data-bs-toggle="modal"
+                          data-bs-target="#exampleModal"
+                          onClick={() => {
+                            setParqueadero((prevParqueadero) => ({
+                              ...prevParqueadero,
+                              NumeroEspacio: record.NumeroEspacio,
+                              TipoEspacio: record.TipoEspacio,
+                              Estado: record.Estado,
+                              id: record.id,
+                            }));
+                            setCurrentAccion("Actualizar");
+                          }}
                         >
-                          Cerrar
-                        </button>
-                        <button
-                          type="submit"
-                          className={
-                            accion === "Actualizar"
-                              ? "btn btn-warning"
-                              : accion === "Insertar"
-                              ? "btn btn-success w-25 m-0"
-                              : null
-                          }
-                        >
-                          {accion}
+                          <FontAwesomeIcon icon={faPenToSquare} />
                         </button>
                       </div>
-                    </form>
-                  </div>
+                    </div>
+                    <div
+                      class="modal fade"
+                      id="exampleModal"
+                      tabindex="-1"
+                      aria-labelledby="exampleModalLabel"
+                      aria-hidden="true"
+                    >
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">
+                              {accion} Parqueadero
+                            </h1>
+                            <button
+                              type="button"
+                              class="btn-close"
+                              data-bs-dismiss="modal"
+                              aria-label="Close"
+                            ></button>
+                          </div>
+                          <form onSubmit={enviar}>
+                            <div class="modal-body">
+                              <div className="mb-3">
+                                <label
+                                  htmlFor="exampleInputEmail1"
+                                  className="form-label"
+                                >
+                                  Numero de Espacio
+                                </label>
+                                <input
+                                  type="text"
+                                  className="form-control"
+                                  id="exampleInputEmail1"
+                                  required
+                                  value={parqueadero.NumeroEspacio}
+                                  onChange={(e) =>
+                                    setParqueadero((prevParqueadero) => ({
+                                      ...prevParqueadero,
+                                      NumeroEspacio: e.target.value,
+                                    }))
+                                  }
+                                />
+                              </div>
+                              <div className="mb-3">
+                                <label
+                                  htmlFor="exampleInputPassword1"
+                                  className="form-label"
+                                >
+                                  Tipo de Espacio
+                                </label>
+                                <input
+                                  type="text"
+                                  className="form-control"
+                                  id="exampleInputPassword1"
+                                  required
+                                  value={parqueadero.TipoEspacio}
+                                  onChange={(e) =>
+                                    setParqueadero((prevParqueadero) => ({
+                                      ...prevParqueadero,
+                                      TipoEspacio: e.target.value,
+                                    }))
+                                  }
+                                />
+                              </div>
+                              <div className="mb-3">
+                                <label
+                                  htmlFor="exampleInputPassword1"
+                                  className="form-label"
+                                >
+                                  Estado
+                                </label>
+                                <input
+                                  type="text"
+                                  className="form-control"
+                                  id="exampleInputPassword1"
+                                  required
+                                  value={parqueadero.Estado}
+                                  onChange={(e) =>
+                                    setParqueadero((prevParqueadero) => ({
+                                      ...prevParqueadero,
+                                      Estado: e.target.value,
+                                    }))
+                                  }
+                                />
+                              </div>
+                            </div>
+                            <div class="modal-footer">
+                              <button
+                                type="button"
+                                class="btn btn-danger"
+                                data-bs-dismiss="modal"
+                              >
+                                Cerrar
+                              </button>
+                              <button
+                                type="submit"
+                                className={
+                                  accion === "Actualizar"
+                                    ? "btn btn-warning"
+                                    : accion === "Insertar"
+                                    ? "btn btn-success w-25 m-0"
+                                    : null
+                                }
+                              >
+                                {accion}
+                              </button>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              ))
+            : filteredRecords.map((record, index) => (
+                <tr key={index}>
+                  <td>{record.NumeroEspacio}</td>
+                  <td>{record.TipoEspacio}</td>
+                  <td>{record.Estado}</td>
+                  <td>
+                    <div className="d-flex flex-row">
+                      <div className="mx-2">
+                        <form className="p-0" onSubmit={enviar}>
+                          <button
+                            onClick={() => eliminar(record.id)}
+                            type="submit"
+                            className="btn btn-danger px-2"
+                          >
+                            <FontAwesomeIcon icon={faTrash} />
+                          </button>
+                        </form>
+                      </div>
+                      <div className="mx-2">
+                        <button
+                          type="button"
+                          className="btn btn-warning px-2 py-1"
+                          data-bs-toggle="modal"
+                          data-bs-target="#exampleModal"
+                          onClick={() => {
+                            setParqueadero((prevParqueadero) => ({
+                              ...prevParqueadero,
+                              NumeroEspacio: record.NumeroEspacio,
+                              TipoEspacio: record.TipoEspacio,
+                              Estado: record.Estado,
+                              id: record.id,
+                            }));
+                            setCurrentAccion("Actualizar");
+                          }}
+                        >
+                          <FontAwesomeIcon icon={faPenToSquare} />
+                        </button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              ))}
+          <div
+            class="modal fade"
+            id="exampleModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">
+                    {accion} Parqueadero
+                  </h1>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
                 </div>
+                <form onSubmit={enviar}>
+                  <div class="modal-body">
+                    <div className="mb-3">
+                      <label
+                        htmlFor="exampleInputEmail1"
+                        className="form-label"
+                      >
+                        Numero de Espacio
+                      </label>
+                      <input
+                        type="text"
+                        className="form-control"
+                        id="exampleInputEmail1"
+                        required
+                        value={parqueadero.NumeroEspacio}
+                        onChange={(e) =>
+                          setParqueadero((prevParqueadero) => ({
+                            ...prevParqueadero,
+                            NumeroEspacio: e.target.value,
+                          }))
+                        }
+                      />
+                    </div>
+                    <div className="mb-3">
+                      <label
+                        htmlFor="exampleInputPassword1"
+                        className="form-label"
+                      >
+                        Tipo de Espacio
+                      </label>
+                      <input
+                        type="text"
+                        className="form-control"
+                        id="exampleInputPassword1"
+                        required
+                        value={parqueadero.TipoEspacio}
+                        onChange={(e) =>
+                          setParqueadero((prevParqueadero) => ({
+                            ...prevParqueadero,
+                            TipoEspacio: e.target.value,
+                          }))
+                        }
+                      />
+                    </div>
+                    <div className="mb-3">
+                      <label
+                        htmlFor="exampleInputPassword1"
+                        className="form-label"
+                      >
+                        Estado
+                      </label>
+                      <input
+                        type="text"
+                        className="form-control"
+                        id="exampleInputPassword1"
+                        required
+                        value={parqueadero.Estado}
+                        onChange={(e) =>
+                          setParqueadero((prevParqueadero) => ({
+                            ...prevParqueadero,
+                            Estado: e.target.value,
+                          }))
+                        }
+                      />
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-danger"
+                      data-bs-dismiss="modal"
+                    >
+                      Cerrar
+                    </button>
+                    <button
+                      type="submit"
+                      className={
+                        accion === "Actualizar"
+                          ? "btn btn-warning"
+                          : accion === "Insertar"
+                          ? "btn btn-success w-25 m-0"
+                          : null
+                      }
+                    >
+                      {accion}
+                    </button>
+                  </div>
+                </form>
               </div>
-            </td>
+            </div>
+          </div>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th colSpan="3"></th>
+            <th rowSpan="1" colSpan="1">
+              <button
+                type="button"
+                className="btn btn-success p-0 m-0 w-50"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+                onClick={() => {
+                  setParqueadero((prevReuniones) => ({
+                    ...prevReuniones,
+                    NumeroEspacio: "",
+                    TipoEspacio: "",
+                    Estado: "",
+                  }));
+                  setCurrentAccion("Insertar");
+                }}
+              >
+                <FontAwesomeIcon icon={faSquarePlus} />
+              </button>
+            </th>
           </tr>
-        ))}
-        <div
-          class="modal fade"
-          id="exampleModal"
-          tabindex="-1"
-          aria-labelledby="exampleModalLabel"
-          aria-hidden="true"
-        ></div>
-      </tbody>
-      <tfoot>
-        <tr>
-          <th colSpan="3"></th>
-          <th rowSpan="1" colSpan="1">
-            <button
-              type="button"
-              className="btn btn-success p-0 m-0 w-50"
-              data-bs-toggle="modal"
-              data-bs-target="#exampleModal"
-              onClick={() => {
-                setParqueadero((prevReuniones) => ({
-                  ...prevReuniones,
-                  NumeroEspacio: "",
-                  TipoEspacio: "",
-                  Estado: "",
-                }));
-                setCurrentAccion("Insertar");
-              }}
-            >
-              <FontAwesomeIcon icon={faSquarePlus} />
-            </button>
-          </th>
-        </tr>
-      </tfoot>
-    </table>
+        </tfoot>
+      </table>
+    </>
   );
 };
 
